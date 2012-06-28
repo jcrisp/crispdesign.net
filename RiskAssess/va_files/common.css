@@ -1,0 +1,658 @@
+/* Core layout */
+
+body 
+{
+  background-color: #67514d;
+	margin:0;
+	padding:0;
+	color:#000;
+	font: normal 76%/140% Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-align: center;
+} 
+
+h1
+{
+  font: 2.5em Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  border: 0;
+}
+
+h2, h3, h4
+{
+  font: 1.5em Verdana, Geneva, Arial, Helvetica, sans-serif; 
+  font-weight: bold;
+  clear: both;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+h2
+{
+  padding-top: 0.4em;
+  padding-bottom: 0.5em;
+}
+
+h3, h4
+{
+  font-size: 1.1em;
+  padding-top: 0.3em;
+  margin: 0;
+  padding-bottom: 0.1em;
+}
+
+h4 { font-size: 1em; font-style: italic; padding-bottom: 0; }
+
+hr { margin: 0; padding: 0; margin-top: 0.2em; margin-bottom: 0.2em; clear: both; }
+
+pre
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  clear: both;
+  padding: 0;
+  margin: 0;
+
+  /* word wrap */
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#main 
+{
+  background: #fbf9f0;
+  margin: 0px auto;
+  padding: 0px;
+  height:90%; 
+  width: 800px;
+  text-align: left;
+}
+
+
+#banner
+{
+  margin: 0px auto; 
+  margin-top: 20px; 
+  width: 807px;
+  height: 188px;
+}
+
+#banner a
+{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#banner img 
+{ 
+  border: 0;
+}
+
+#footer
+{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 800px;
+  text-align: left;
+  font-size: 0.8em;
+  color: #fbf9f0;
+}
+
+#footer a
+{
+  color: #fbf9f0;
+}
+
+.padder
+{
+  padding: 10px;
+}
+
+.spacer 
+{
+  clear: both; 
+}
+
+p { margin: 0; padding: 0px; padding-bottom: 0.5em; padding-top: 0.4em; }
+
+ul,
+ol {
+	list-style-type:none;
+	list-style-position:outside;
+	padding:0;
+	margin:.5em 0 .5em 0;
+}
+
+ul li,
+ol li {
+	background:transparent url(../images/bullet.png) 2px .7em no-repeat;
+	padding-left:15px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.clear { clear: both; }
+
+.header_level_links
+{
+  float: right;
+  margin-top: -2em;
+  font-size: 0.9em;
+  padding-right: 5px;
+}
+
+
+/* default form layout */
+form, fieldset { margin: 0; padding: 0; }
+input, select, button { background-color: #FFF !important }
+
+/* Errors and notices */
+
+.error_explanation, .success_explanation, #errorExplanation p 
+{
+  background-repeat: no-repeat;
+  background-position: 0 1.5em;
+  margin-left: 20px;
+  padding: 1.5em;
+  padding-left: 2em;
+  font-weight: bold;
+}
+
+.error_explanation, #errorExplanation p 
+{
+  background-image: url(../images/error.gif);
+  color: red;
+}
+
+.success_explanation
+{
+  background-image: url(../images/ok.gif);
+  color: green;
+}
+
+.error_explanation a, .success_explanation a
+{
+  font-size: 0.8em;
+  font-weight: normal;
+  text-decoration: none;
+  color: gray;
+}
+
+#login .error_explanation
+{
+  margin-left: 5px;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  background-position: 0 1em;
+}
+
+#errorExplanation 
+{
+  color: red;
+  width: 80%;
+}
+
+#errorExplanation p
+{
+  padding-bottom: 0;
+}
+
+#errorExplanation h2 
+{
+  display: none;
+}
+
+#errorExplanation ul 
+{
+  list-style: disc;
+  font-size: 0.95em;
+  line-height: 1em;
+  padding-bottom: 1em;
+}
+
+#errorExplanation ul li
+{
+  margin-top: 5px;
+  margin-left: 6.5em;
+  background-image: none;
+}
+
+.fieldWithErrors { 
+  width: 220px;
+  padding-left: 20px;
+  background-image: url(../images/error.gif);
+  background-repeat: no-repeat;
+  background-position: 0px 2px; 
+  display: inline;
+  font-size: 120%;
+}
+
+.fieldWithErrors input, .fieldWithErrors select, .fieldWithErrors textarea { 
+  font-size: 100%;
+}
+
+#helptext
+{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  padding-left: 60px;
+  padding-right: 10px;
+  background-image: url(../images/information.gif);
+  background-repeat: no-repeat;
+  background-position: 10px 15px; 
+  background-color: #fbf4ed;
+  border: 1px gray solid; 
+}
+
+/* Front landing page */
+#welcome_copy
+{
+  margin: 0px;
+  margin-top: 10px;
+  width: 400px;
+  float: left;
+  line-height: 1.5em;
+  padding: 0px;
+}
+
+#login label { float: left; width: 95px; margin-top: 2px; }
+#login form { margin-top: 15px; }
+#login_school_name, #login_password
+{
+  width: 160px;
+  margin-bottom: 0.8em;
+}
+#login br { clear: left; }
+#login_submit { margin-left: 95px; }
+#login
+{
+  margin-top: 2em;
+  background: #fbf4ed;
+  padding: 1em;
+  width: 280px;
+  float: right;
+}
+.login_box_title
+{
+  font-weight: bold;
+  border-bottom: #4d4e4f 1px solid;
+  color: #4d4e4f;
+}
+
+/* RA render */
+.comment_box
+{
+  margin-top: 5px;
+  border: 1px solid gray;
+  font-style: italic;
+  text-align: right;
+  padding-right: 2px;
+  padding-top: 2em;
+}
+
+.info_display label
+{
+  font-weight: bold;
+  display: block;
+  display: inline;
+  width: 10em;
+  float: left;
+  margin-bottom: 5px;
+}
+
+.info_display label.full_line 
+{ 
+  width: 25em; 
+  padding-top: 5px;
+}
+
+.info_display span
+{
+  float: left;
+}
+
+.info_display br, .info_display pre { clear: both; }
+
+.info_display_one_line label
+{
+  font-weight: bold;
+  display: block;
+  display: inline;
+  padding-right: 1em;
+  float: left;
+  margin-bottom: 5px;
+}
+
+.info_display_one_line span
+{
+  float: left;
+  padding-right: 3em;
+}
+
+.school_header
+{
+  float: right;
+  padding-right: 12px;
+  font-weight: bold;
+}
+
+.risk_assessment_title
+{
+  float: left;
+  font-weight: bold;
+}
+
+h2.experiment_name
+{
+  clear: both;
+  text-align: center;
+  padding-top: 0;
+}
+
+.four_column_list { width: 98%; margin: 0; padding: 0; padding-bottom: 0.4em; }
+.four_column_list li { float: left; width: 23%; }
+
+.scheduling
+{
+  float: left;
+  padding-left: 2em;
+}
+
+.ingredient_info h2
+{
+  float: left;
+  font-size: 1.1em;
+  clear: left;
+  padding: 0;
+}
+
+.ingredient_info .other_names_header 
+{ 
+  float: left; 
+  padding-left: 5px;
+}
+
+.ingredient_info .formula
+{
+  float: right;
+  margin-right: 8px;
+  margin-top: 0;
+  padding-right: 0;
+  padding-left: 10px;
+  clear: none;
+}
+
+.ingredient_info .header_field
+{
+  float: left;
+  padding-right: 4em;
+}
+
+
+.ingredient_info .minor_header_field
+{
+  float: right;
+  padding-left: 3em;
+  font-size: 0.8em;
+}
+
+.ingredient_info .notes
+{
+  float: left;
+  width: 49%;
+  margin-top: 5px;
+}
+
+.ingredient_info h3
+{
+  margin: 0;
+  padding: 6px 0 2px 0;
+  font-size: 1.1em;
+}
+
+.ingredient_info .notes_spacer
+{
+  float: left;
+  width: 2%;
+}
+
+.ingredient_info .spacer
+{
+  height: 0.2em;
+}
+
+.ingredient_info
+{
+  border: 1px gray solid;
+  padding: 5px;
+  width: 96%;
+  margin-bottom: 5px;
+}
+
+/* Navigation buttons & print email boxes on RA show */
+.button_box
+{
+  margin: 0; padding: 10px 5px 10px 5px; 
+  border: 1px gray solid;
+  background-color: #fbf4ed;
+  width: 98%;
+}
+.button_box .small_button, { width: 6em; }
+.button_box .medium_button { width: 10em; }
+.button_box .large_button { width: 14em; }
+.button_box br { clear: both; }
+.button_box a { float: right; margin: 3px 5px 2px 5px; font-weight: bold;}
+.button_box a.search { float: left; margin: 3px 10px 2px 0px; font-weight: bold; width: 10em;}
+.button_box button { float: left; margin-right: 5px; }
+
+#print_email #email_address { width: 25em; }
+#print_email button { float: right; margin-left: 5px; }
+#print_email #email { float: left; }
+#print_email .success_explanation, #print_email .error_explanation 
+{ padding-bottom: 0; margin-left: 0; padding-top: 0.5em; background-position: 0 0.5em;}
+
+
+/* iframe for archived RAs */
+#archived_frame { width: 99%; margin-bottom: 13px; }
+
+/* Sig / Esig */
+.paper_signature button { width: 12em; font-size: 90%; }
+
+.esig_form { border: 1px dashed; padding: 1em; }
+.esig p, .esig_form p { font-style: italic; clear: both; }
+.esig_form button, .esig_form .button { margin-left: 1em; width: 7em; }
+.esig_form input { width: 20em; }
+.esig_form label { line-height: 2em; }
+
+.esig .sign_box, .esig .sign_date_box { margin-top: 0.25em; margin-bottom: 0.1em; width: 35%; line-height: 1em; }
+.esig .sign_date_box { width: 15%; }
+.esig button { font-size: 90%; margin-top: -0.2em; }
+
+.sign_box, .sign_date_box
+{
+  width: 155px;
+  border-bottom: 1px dotted black;
+  float: left;
+  margin: 0.5em 2em 0.5em 0;
+  height: 1.1em;
+}
+.sign_date_box { width: 70px; }
+
+
+#chem_user_codes_info { width: 90%; }
+#chem_user_codes_info table, #chem_user_codes_info td, #chem_user_codes_info th
+{ 
+  border-collapse: collapse;
+  border: 1px solid black; 
+  padding: 4px;
+  margin: 2px;
+  vertical-align: top;
+}
+#chem_user_codes_info th { line-height: 1.5em; vertical-align: bottom; }
+#chem_user_codes_info table { margin-top: 10px; margin-bottom: 20px; }
+
+/* RA search */
+table.search_results { border-collapse: collapse; width: 100%; margin: 1em 0 0 0; font-size: 0.95em; }
+.search_results tr, .search_results td, .search_results th { padding: 5px; }
+.search_results td { border-bottom: solid 1px #dcdcc6; }
+.search_results tr.even { background-color: #f5f5e5; }
+.search_results th
+{
+  font-weight: bold;
+  color: #4d4e4f;
+  border-top: #dcdcc6 3px solid;
+  border-bottom: #dcdcc6 3px solid;
+}
+#no_results_found { margin-top: 5px; margin-bottom: 15px; color: blue; }
+img.icon { border: 0; vertical-align: bottom; margin-right: 4px; }
+
+.pagination 
+{
+  border-top: #dcdcc6 2px solid;
+  border-bottom: #dcdcc6 3px solid;
+  padding: 3px 0 3px 0;
+  color: #4d4e4f;
+}
+.pagination .prev_page, .pagination .next_page { font-weight: bold; }
+.pagination span, .pagination a { padding: 3px; }
+.pagination a { color: #4d4e4f; }
+.pagination .disabled { color: #AAA; }
+.pagination .current { color: #BB0000; font-weight: bold; }
+
+
+/* home page */
+.right_link { float: right; font-weight: bold; margin-top: 7px; margin-left: 10px; }
+h2.with_right_link { float: left; width: 640px; }
+
+#home_new_ra, #home_recent_ras { float: left; width: 310px; padding: 0; padding-bottom: 20px; margin: 0; }
+#home_new_ra, #home_ra_search { padding-top: 10px; }
+#home_new_ra .large_button { width: 17em; margin: 5px 5px 5px 35px; }
+#home_recent_ras  li { background:none; padding-left:2px; }
+
+#home_ra_search dl { margin-top: 0; }
+#home_ra_search { float: right; width: 430px; padding-bottom: 20px; }
+#home_ra_search .field_help { margin-bottom: 10px; }
+#home_ra_search #search_button { width: 16em; }
+
+#home_news { clear: both; }
+#home_news #stories { padding: 5px 0 5px 0; height: 200px; overflow: scroll; overflow-x: hidden; } 
+#home_news #stories h3 { color: #4D4E4F; }
+
+.box_title, .box_content { margin: 0px auto; padding: 5px; }
+
+.box_title
+{
+  background: #dcdcc6;
+  font-weight: bold;
+  font-size: 1em;
+  border-bottom: 1px solid #AAA;
+  border-right: 1px solid #AAA;
+  border-top: 1px solid #EEE;
+  border-left: 1px solid #EEE;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+}
+
+.box_content
+{
+  background: #fbf4ed;
+  border: 1px solid #DDD;
+  border-top: none;
+}
+
+
+/* forms */
+fieldset, fieldset dl, fieldset dd, fieldset dt { border: 0; padding: 0; margin: none; }
+fieldset dl { padding-bottom: 15px; }
+fieldset dt { float: left; width: 160px; clear: left; margin: 2px; 0px 10px 0; padding-right: 10px; }
+fieldset dd { float: left; width: 600px; padding 5px; margin: 0 0 10px 0; }
+fieldset dd input, fieldset dd textarea { width: 250px; }
+fieldset label { font-weight: bold; color: #4d4e4f; }
+fieldset dd label { font-weight: bold; color: black; }
+.field_help { font-weight: normal; color: #4d4e4f; font-size: 0.9em; }
+fieldset dt label a { font-weight: normal; font-size: 0.9em; }
+fieldset .submit_button { margin-top: 0.3em; }
+fieldset a.cancel { display: block; margin-top: 0.9em; }
+fieldset .new_section { margin-top: 1em; }
+
+/* edit RA form */
+fieldset dd.chem_user_codes .field_help { float: left; width: 90px; margin-left: 0; }
+fieldset dd.chem_user_codes #user_code_selects { clear: left; }
+fieldset dd.chem_user_codes #user_code_selects select { width:45px; float:left; margin-right: 45px; text-align: center;}
+fieldset #conditions_of_use { margin-top: 1.5em; }
+fieldset #ra_year_group_other { margin-top: 5px; }
+fieldset #ra_preparation { width: 300px; }
+fieldset #ra_scheduling { width: 180px; }
+
+.add_box { margin-left: 2px; margin-top: 2em; clear: left; }
+.add_box .add_text { width: 140px; margin: 5px 0 0 0; clear: left; }
+.add_box .add_button { width: 9em; margin-top: 5px; } 
+.add_box select { width: 200px; }
+.add_box table { border: 1px gray solid; width: 35%; }
+.add_box td, .add_box th { padding: 5px; } 
+.add_box th { font-weight: bold; color: #4d4e4f; text-align: left; }
+.ingredient_help, .right_info_box
+{
+  border: 1px gray solid;
+  float: right;
+  padding: 10px 5px 8px 43px;
+  width: 33%;
+  margin-right: 24%;
+
+  background-image: url(../images/information.gif);
+  background-repeat: no-repeat;
+  background-position: 5px 8px; 
+  background-color: #fbf4ed;
+}
+.right_info_box { margin: 10px 20px 0 0; width: 220px; }
+.right_info_box li { margin-bottom: 5px; }
+
+
+/* subscribe form */
+#subscribe_form { padding-top: 10px; }
+#subscribe_form .field_help { padding-bottom: 0.5em; }
+#contact_names .field_help { float: left; width: 260px; }
+#subscribe_submit_button { margin: 1.5em 0 1em 0; width: 200px; }
+select.wide { width: 254px; }
+
+/* search form */
+#search_form dt { width: 150px; }
+#search_form dd { width: 250px; }
+#search_form input, #search_form select { width: 240px; }
+#search_form select { width: 244px; }
+
+
+#review_notes { border: 1px solid black; margin-right: 5px; margin-top: 1em; } 
+#review_notes_form textarea {width: 755px; height: 80px; }
+#review_notes_content { padding: 3px; }
+
+
+/* Please wait dialog box */
+
+* html .fixed { position:absolute }
+.fixed { position:fixed }
+
+/* DIALOG CORE */
+#dialog-overlay { top:0;left:0;width:100%;height:100%;z-index:900 }
+#dialog-container { overflow:hidden;z-index:901 }
+
+/* DIALOG TOP */
+#dialog-top{background:#99f;border:1px solid #fff;padding:5px;font-weight:bold}
+#dialog-title{color:#fff}
+#dialog-close{color:#fff;padding-left:5px}
+#dialog-close:hover{color:#ccc}
+
+/* DIALOG BOTTOM */
+#dialog-bottom{background:#eee;border-top:1px solid #ccc;color:#666;padding:5px;text-align:center;font-size:12px}
+
+/* DIALOG MISC */
+#dialog-loading{color:#ccc;font-weight:bold;text-align:center;padding:20px}
+

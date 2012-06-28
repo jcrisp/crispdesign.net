@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+  <title>RiskAssess - Risk Assessments for Australian Schools</title>
+  <meta name="description" content="Perform risk assessments and order experiments quickly and easily. Make your school safer and meet Australian legal requirements with the RiskAssess online system.">
+  <meta name="keywords" content="riskassess, school risk assessment, high school risk assessment, risk assessment, riskassessments">
+  <link href="va_files/common.css" media="all" rel="stylesheet" type="text/css">
+  <link href="va_files/print.css" media="print" rel="stylesheet" type="text/css">
+  <script src="va_files/prototype.js" type="text/javascript"></script>
+<script src="va_files/dialog.js" type="text/javascript"></script>
+<script src="va_files/common.js" type="text/javascript"></script>
+</head><body><div class="fixed" id="dialog-container" style="display: none;"><div id="dialog-top" style="display: none;"><span id="dialog-title" style="display: none;"></span><a href="javascript:;" id="dialog-close" style="display: none;">&nbsp;×&nbsp;</a></div><div id="dialog-content" style="display: none;"></div><div id="dialog-bottom" style="display: none;"><a class="prev" href="javascript:;" style="display: none;">« Previous</a><span class="curr" style="display: none;"></span><a class="next" href="javascript:;" style="display: none;">Next »</a></div></div><div class="fixed" id="dialog-overlay" style="display: none;"></div>
+  <h1 id="banner"><a href="http://ubun:3000/home"><img alt="RiskAssess - Risk Assessments for High Schools" src="va_files/banner.jpg"></a></h1>
+  <div id="main">
+    <div class="padder">
+      <h2>Risk Assessment for Artmaking</h2>
+<form action="http://ubun:3000/risk_assessment/store" id="ra_form" method="post">
+  
+
+  <fieldset>
+  <dl>
+    <dt><label for="ra_author">School: </label></dt>
+    <dd><label>St Crispin School</label></dd>
+
+    <dt><label for="ra_author">Author: </label></dt>
+    <dd><input id="ra_author" name="ra[author]" size="30" value="Phillip Crisp" type="text"></dd>
+
+    <dt><label for="ra_name">Artmaking unit: </label></dt>
+    <dd><input id="ra_name" name="ra[name]" size="30" value="All about family" type="text"></dd>
+
+    <dt><label for="ra_name">Artmaking task: </label></dt>
+    <dd><input id="ra_name" name="ra[name]" size="30" value="Lino cutting" type="text"></dd>
+
+    <dt><label for="ra_procedure">Standard operating procedures / reference:</label></dt>
+    <dd><textarea cols="40" id="ra_procedure" name="ra[procedure]" rows="4"></textarea></dd>
+  </dl>
+
+  <br>&nbsp;
+  <h3>Classes for Which Experiment is Required</h3>
+  <dl>
+    <dt><label for="ra_teacher">Teacher: </label></dt>
+    <dd><input id="ra_teacher" name="ra[teacher]" size="30" value="Phillip Crisp" type="text"></dd>
+
+    <dt><label for="ra_name">Art Technician? </label></dt>
+    <dd><input name="ra[name]" value="0" type="hidden"><input checked="checked" id="ra_name" name="ra[name]" value="1" type="checkbox" style="width: 2em; align: left; margin-left: 0;" onClick="javascript:$('ra_labby_chem_user_code').toggle();$('ra_labby_chem_user_code_title').toggle();"></dd>
+
+    <dt><label for="ra_year_group">Year group: </label></dt>
+    <dd>
+      <select id="ra_year_group_constrained" name="ra[year_group_constrained]" onchange="ra.showHideOtherYearGroupBox('ra_year_group_constrained', 'ra_year_group_other', true);"><option value=""></option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option selected="selected" value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="Demo">Demo</option>
+<option value="Other">Other</option></select><script>document.observe('dom:loaded',function(){ra.showHideOtherYearGroupBox('ra_year_group_constrained', 'ra_year_group_other', false);});</script>
+      <div><input id="ra_year_group_other" name="ra[year_group_other]" size="30" style="display: none;" type="text"></div>
+    </dd>
+
+    <dt><label for="ra_teacher_chem_user_code">
+    Chemical user codes: 
+    <a href="http://ubun:3000/info/chem_user_codes" onclick="ra.popUp('http://ubun:3000/info/chem_user_codes'); return false;" target="_blank">Explanation of codes</a>
+    </label></dt>
+    <dd class="chem_user_codes">
+      <div class="field_help">Teacher</div>
+      <div class="field_help" id="ra_labby_chem_user_code_title">Art Tech</div>
+      <div id="user_code_selects">
+        <select class="with_field_help_top" id="ra_teacher_chem_user_code" name="ra[teacher_chem_user_code]"><option selected="selected" value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option></select>
+        <select class="with_field_help_top art_tech_user_code" id="ra_labby_chem_user_code" name="ra[labby_chem_user_code]"><option selected="selected" value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option></select>
+      </div>
+    </dd>
+  
+    <dt><label for="ra_scheduling">Scheduling:<br>
+      <span class="field_help">
+        <i>For example</i>
+        <br>611 &nbsp; 2 &nbsp; 1/7/08
+        <br>614 &nbsp; 4 &nbsp; 2/7/08
+      </span>
+    </label>
+    </dt>
+    <dd><div class="field_help">Room &nbsp;&nbsp; Period &nbsp;&nbsp; Date</div>
+    <textarea class="with_field_help" cols="40" id="ra_scheduling" name="ra[scheduling]" rows="4">611   2   1/7/08 </textarea></dd>
+  
+    <dt><label for="ra_preparation">Equipment, tools and materials to be prepared: <br>
+      <span class="field_help">
+        <i>For example</i><br>
+        5 groups of:<br>
+          &nbsp;&nbsp;3 x Lino squares<br>
+          &nbsp;&nbsp;1 x Lino knives
+      </span>
+    </label></dt>
+    <dd><div class="field_help">Qty &nbsp; x &nbsp; Item &nbsp;(or groups)</div>
+    <textarea class="with_field_help" cols="40" id="ra_preparation" name="ra[preparation]" rows="8">5 groups of:
+  3 x Lino squares
+  1 x Lino knives</textarea></dd>
+  </dl>
+
+  <h3>Equipment, Tools and Art Materials for Risk Assessment</h3>
+  <span class="field_help">For
+each section below, enter one or more words to search on and then click
+'Search &amp; Add'. If a match is found, it will be added to your risk
+assessment. For example, in the 'Equipment &amp; Tools' section, enter
+'lino knives', click the button, and it will be added to your risk
+assessment. You can also search by incomplete words (eg, 'lino kn' will
+find 'lino knives').</span>
+
+  
+    
+<div class="add_box">
+  <div id="current_Equipment &amp; Tools">
+    
+
+
+
+<input id="selected_Equipment &amp; Tools" name="selected_Equipment &amp; Tools" value="" type="hidden">
+<table>
+  <tbody><tr>
+    <th>Equipment &amp; Tools</th>
+    <th>
+      <img alt="Ajax-loader" id="Equipment &amp; Tools_spinner" src="va_files/ajax-loader.gif" style="">
+      &nbsp;</th>
+  </tr>
+<tr id="Chemicals Used_gentian violet">
+      <td>lino knives</td><td>
+        <a onclick="ra.removeSynonym('selected_Chemicals Used', 'Chemicals Used', 'gentian violet'); return false;" href="#">Remove</a></td>
+    </tr>
+
+  
+
+</tbody></table>
+
+  </div>
+
+ 
+<input class="add_text" id="Equipment &amp; Tools_query" name="Equipment &amp; Tools_query" onkeypress="return ra.handleEnterInQueryField(event, 'Equipment &amp; Tools');" value="lino kn" type="text">
+    <input class="add_button" id="Equipment &amp; Tools_button" onclick="new Ajax.Updater('current_Equipment &amp; Tools', '/risk_assessment/current_ingredients?ingredient_title=Equipment+%26+Tools', {asynchronous:true, evalScripts:true, parameters:{'query': $('Equipment &amp; Tools_query').value, 'selected_Equipment &amp; Tools': $('selected_Equipment &amp; Tools').value}}); $('Equipment &amp; Tools_spinner').style.display=''; $('Equipment &amp; Tools_query').value = '';;" value="Search &amp; Add" type="button">
+
+
+</div>
+
+
+
+  <br>
+  
+    
+<div class="add_box">
+  <div id="current_Art Materials">
+    
+
+<input id="selected_Art Materials" name="selected_Art Materials" value="" type="hidden">
+<table>
+  <tbody><tr>
+    <th>Art Materials (consumables)</th>
+    <th>
+      <img alt="Ajax-loader" id="Art Materials_spinner" src="va_files/ajax-loader.gif" style="display:none;">
+      &nbsp;</th>
+  </tr>
+
+  
+<tr id="Chemicals Usedasdf_gentian violet">
+      <td>lino squares</td><td>
+        <a onclick="ra.removeSynonym('selected_Chemicals Used', 'Chemicals Used', 'gentian violet'); return false;" href="#">Remove</a></td>
+    </tr>
+
+
+<tr id="Chasdfemicals Usedasdf_gentian violet">
+      <td>printing inks</td><td>
+        <a onclick="ra.removeSynonym('selected_Chemicals Used', 'Chemicals Used', 'gentian violet'); return false;" href="#">Remove</a></td>
+    </tr>
+
+
+</tbody></table>
+
+  </div>
+
+ 
+<input class="add_text" id="Art Materials_query" name="Art Materials_query" onkeypress="return ra.handleEnterInQueryField(event, 'Art Materials');" type="text">
+    <input class="add_button" id="Art Materials_button" onclick="new Ajax.Updater('current_Art Materials', '/risk_assessment/current_ingredients?ingredient_title=Art+Materials', {asynchronous:true, evalScripts:true, parameters:{'query': $('Art Materials_query').value, 'selected_Art Materials': $('selected_Art Materials').value}}); $('Art Materials_spinner').style.display=''; $('Art Materials_query').value = '';;" value="Search &amp; Add" type="button">
+
+
+</div>
+
+
+
+  <br>
+
+  <label for="ra_other_risks">Other items: 
+  <br><span class="field_help">Include potential hazards &amp; standard handling procedure</span></label>
+  <br>
+  <textarea cols="40" id="ra_other_risks" name="ra[other_risks]" rows="4"></textarea>
+  <br>
+
+  
+  <p id="conditions_of_use">By running 'Generate Risk Assessment' you accept the 
+  <a href="http://ubun:3000/info/terms" onclick="ra.popUp('/info/terms'); return false;" target="_blank">Conditions of Use</a> for the RiskAssess website.</p>
+  <input class="submit_button" id="submit_button" name="commit" value="Generate Risk Assessment &gt;" type="button"> 
+  <a href="http://ubun:3000/home" class="cancel">&lt; Cancel</a>
+
+
+</fieldset>
+
+<script language="JavaScript">
+  $('ra_author').focus();
+
+  canSubmit = false;
+  $('submit_button').observe('click', function(e) {
+    canSubmit = true;
+    $('ra_form').submit();
+  });
+
+  $('ra_form').observe('submit', function(e) {
+      if (!canSubmit) {
+        e.stop(); 
+      }
+  });
+
+</script>
+
+
+      <div class="spacer">&nbsp;</div>
+    </form></div>
+  </div>
+
+  <div id="footer">
+    RiskAssess helps high-school teachers and laboratory technicians perform risk assessments which meet Australian standards.
+    <br>
+    <a href="http://ubun:3000/home">Home</a>
+    |
+    <a href="http://ubun:3000/info/about">About RiskAssess</a>
+    |
+    <a href="http://ubun:3000/info/terms">Conditions of Use</a>
+    |
+    <a href="http://ubun:3000/info/news">News</a>
+    |
+    <a href="http://ubun:3000/info/faq">Frequently Asked Questions</a>
+    |
+    <a href="http://ubun:3000/info/contact">Contact Us</a>
+    <br>
+    Copyright © 2010 EcoSolve. Icons from <a href="http://tango.freedesktop.org/">Tango</a>.
+  </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="va_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4904755-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body></html>

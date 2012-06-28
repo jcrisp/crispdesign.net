@@ -1,0 +1,61 @@
+
+body 
+{
+  background-color: white;
+  font-size: 70%;
+} 
+
+*:first-child+html body /* ie 7 hack so text doesn't get too shrunk for print on one page */
+{
+  font-size: 100%;
+}
+
+#main 
+{
+  background: white;
+  height:100%; 
+  width: 100%;
+}
+
+
+#banner
+{
+  display: none;
+  height: 0
+}
+
+#main
+{
+  height: 100%;
+}
+
+.padder
+{
+  margin: 0;
+  padding: 0;
+}
+
+#footer
+{
+  display: none;
+  height: 0;
+}
+
+ul, li, ol, ul li
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 0.5em;
+  background-image: none;
+}
+
+.button_box { display: none; height: 0; }
+
+.chemical_info .header_field { padding-right: 2em; }
+
+.paper_signature button, .esig button { display: none; }
+
+#review_notes_display button { display: none; }
+
+.certification a { color: black; text-decoration: none; }
